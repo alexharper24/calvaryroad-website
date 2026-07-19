@@ -73,7 +73,7 @@
       <div id="boxcast-player"></div>
     </div>
     <p class="text-center" style="margin-top:14px;color:var(--text-light);">
-      When we are not streaming live, the player shows our most recent service.
+      When we are not streaming live, the most recent service plays automatically. Browse past services in the list below the player.
     </p>
     <script>
     /* BoxCast player widget, configured for a clean single-player look:
@@ -89,12 +89,13 @@
       showTitle: false,
       showDescription: false,
       showHighlights: false,
-      showRelated: false,
+      showRelated: true,
       showDocuments: false,
       showIndex: false,
       showDonations: false,
       defaultVideo: 'next',
-      market: 'house-of-worship'
+      market: 'house-of-worship',
+      layout: 'playlist-to-bottom'
     }));
     </script>
 
