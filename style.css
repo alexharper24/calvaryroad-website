@@ -43,7 +43,7 @@ h3 { font-size: 1.28rem; }
 p { margin: 0 0 1rem; }
 a { color: var(--accent-deep); text-decoration: none; }
 a:hover { text-decoration: underline; }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
 /* ---------- sections & rhythm (banded) ---------- */
