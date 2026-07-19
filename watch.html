@@ -69,14 +69,34 @@
 
 <section class="section">
   <div class="container" style="max-width:960px;">
-    <div class="video-wrap fade-up">
-      <iframe title="Calvary Road Baptist Church live stream and sermon archive"
-        src="https://boxcast.tv/channel/kqakxvjrylbqtkqstupd"
-        allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    <div class="fade-up" style="box-shadow:var(--shadow-lg);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#000;">
+      <div id="boxcast-player"></div>
     </div>
     <p class="text-center" style="margin-top:14px;color:var(--text-light);">
-      When the church is not streaming live, the player shows our most recent services.
+      When we are not streaming live, the player shows our most recent service.
     </p>
+    <script>
+    /* BoxCast player widget, configured for a clean single-player look:
+       title, description, playlist ("related"), documents, and index all hidden. */
+    (function (d, s, c, o) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      js = d.createElement(s);
+      js.src = 'https://js.boxcast.com/v3.min.js';
+      js.charset = 'utf-8';
+      js.onload = function () { boxcast.noConflict()('#boxcast-player').loadChannel(c, o); };
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'kqakxvjrylbqtkqstupd', {
+      showTitle: false,
+      showDescription: false,
+      showHighlights: false,
+      showRelated: false,
+      showDocuments: false,
+      showIndex: false,
+      showDonations: false,
+      defaultVideo: 'next',
+      market: 'house-of-worship'
+    }));
+    </script>
 
     <div class="grid grid-3 fade-up" style="margin-top:34px;">
       <div class="card text-center">
