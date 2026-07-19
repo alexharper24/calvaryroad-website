@@ -1,0 +1,7 @@
+# Working-only originals recovered from the old site (kept locally, not published).
+# The site references the processed files in img/*.jpg|png, not these.
+img/_raw/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
