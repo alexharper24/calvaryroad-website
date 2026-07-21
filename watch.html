@@ -39,7 +39,7 @@
       <a href="watch.html" class="active">Watch</a>
       <a href="events.html">Events</a>
       <a href="visit.html">Visit</a>
-      <a class="btn btn-accent" href="https://give.tithe.ly/?formId=65976ddc-5d42-11ee-90fc-1260ab546d11" target="_blank" rel="noopener">Give</a>
+      <a class="btn btn-accent" href="watch.html#give">Give</a>
     </nav>
     <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
@@ -56,7 +56,7 @@
   <a href="watch.html">Watch</a>
       <a href="events.html">Events</a>
   <a href="visit.html">Visit</a>
-  <a class="btn btn-accent" href="https://give.tithe.ly/?formId=65976ddc-5d42-11ee-90fc-1260ab546d11" target="_blank" rel="noopener">Give Online</a>
+  <a class="btn btn-accent" href="watch.html#give">Give Online</a>
 </div>
 
 <main>
@@ -140,11 +140,13 @@
     </div>
 
     <!-- PayPal, on-page secure popup (PayPal blocks iframing its checkout) -->
-    <div class="fade-up text-center" style="border-top:1px solid var(--line);padding-top:30px;">
+    <div class="fade-up text-center">
       <h3 style="margin-bottom:4px;">Support the Ministry with PayPal</h3>
-      <p style="max-width:560px;margin:0 auto 16px;color:var(--text-light);">Prefer PayPal? Send a one-time gift to support the work of the church. The secure PayPal window opens right here on this page.</p>
-      <div id="paypal-donate-button" style="display:flex;justify-content:center;min-height:52px;"></div>
-      <noscript><a class="btn btn-outline" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F9DT8R7LB3SHC" target="_blank" rel="noopener">Give with PayPal</a></noscript>
+      <p style="max-width:560px;margin:0 auto 16px;color:var(--text-light);">Prefer PayPal? Send a one-time gift to support the work of the church. Clicking Donate opens a secure PayPal window.</p>
+      <div style="max-width:540px;margin:0 auto;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);background:#fff;padding:28px 26px;">
+        <div id="paypal-donate-button" style="display:flex;justify-content:center;min-height:52px;"></div>
+        <noscript><a class="btn btn-outline" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F9DT8R7LB3SHC" target="_blank" rel="noopener">Give with PayPal</a></noscript>
+      </div>
     </div>
     <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
     <script>
