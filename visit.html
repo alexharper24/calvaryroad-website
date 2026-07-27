@@ -125,7 +125,11 @@
       <hr class="rule">
       <p>Are you facing a challenge right now? We would count it a privilege to pray for you. Every request is treated with compassion and complete confidentiality.</p>
     </div>
-    <form class="fade-up" id="prayerForm">
+    <form class="fade-up" action="https://formsubmit.co/mkleitz@calvaryroadbaptist.net" method="POST">
+      <input type="hidden" name="_subject" value="New prayer request from calvaryroadbaptist.net">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      <input type="text" name="_honey" style="display:none">
       <label for="pf-name">Name (optional)</label>
       <input type="text" id="pf-name" name="name" autocomplete="name">
       <label for="pf-email">Email (optional)</label>
@@ -133,7 +137,7 @@
       <label for="pf-msg">Your prayer request</label>
       <textarea id="pf-msg" name="message" required></textarea>
       <button class="btn btn-primary" type="submit" style="margin-top:16px;width:100%;">Send Prayer Request</button>
-      <p class="form-note" style="margin-top:14px;">This opens your email app with the request ready to send to the church. Prefer to call? Reach us at <a href="tel:+18129451943">(812) 945-1943</a>.</p>
+      <p class="form-note" style="margin-top:14px;">Your request is sent privately to the church. Prefer to call? Reach us at <a href="tel:+18129451943">(812) 945-1943</a>.</p>
     </form>
   </div>
 </section>
@@ -180,21 +184,5 @@
 </footer>
 
 <script src="main.js" defer></script>
-<script>
-/* Prayer request: compose a mailto so a static site never silently drops a submission.
-   Replace with a Cloudflare Worker or Formspree endpoint when server-side handling is added. */
-document.getElementById('prayerForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  var name = document.getElementById('pf-name').value.trim();
-  var email = document.getElementById('pf-email').value.trim();
-  var msg = document.getElementById('pf-msg').value.trim();
-  var body = 'Prayer Request from the website:\n\n' + msg +
-    '\n\n---\nName: ' + (name || '(not given)') +
-    '\nEmail: ' + (email || '(not given)');
-  window.location.href = 'mailto:mkleitz@calvaryroadbaptist.net' +
-    '?subject=' + encodeURIComponent('Prayer Request from the Website') +
-    '&body=' + encodeURIComponent(body);
-});
-</script>
 </body>
 </html>
