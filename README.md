@@ -33,6 +33,42 @@ These were recovered from the old site, which had conflicting information. Confi
 4. **Photos are low resolution.** All gallery photos were recovered from the old site's slideshow (600x250). They are usable but not sharp. Replacing them with fresh, higher-resolution photos is the single biggest quality upgrade available.
 5. **Logo.** Recreated as a clean transparent-white PNG from the old black JPEG. If the church has the original vector/high-res logo, swap it in for crisper rendering.
 
+## Old-site URL redirects (SEO carry-over)
+
+The previous Shepherd's Land site used extensionless URLs that Google has indexed. Because
+GitHub Pages cannot issue server-side 301s, each old URL is a directory containing an
+`index.html` stub with `rel=canonical` + a 0-second meta refresh + a JS redirect. This
+consolidates the old ranking onto the new pages.
+
+| Old URL | New target |
+|---|---|
+| `/Home` | `/` |
+| `/Our-Staff` | `/about.html` |
+| `/Our-History` | `/about.html` |
+| `/What-We-Believe` | `/beliefs.html` |
+| `/Gods-Simple-Plan` | `/gospel.html` |
+| `/Evangelist-Randy-OBrien` | `/evangelism.html` |
+| `/Calendar-Of-Events` | `/events.html` |
+| `/Times-Of-Services` | `/visit.html` |
+| `/Contact-Us` | `/visit.html` |
+| `/Send-Your-Prayer-Request` | `/visit.html#prayer` |
+
+These stubs are intentionally **not** listed in `sitemap.xml`. If the site ever moves to
+Cloudflare, replace them with real 301 redirects (Bulk Redirects) and delete the folders.
+
+## Structured data (JSON-LD)
+
+- `index.html` — `Church` (NAP, geo, hours, sameAs incl. Facebook/Twitter/BoxCast), `FAQPage`, `WebSite`
+- `about.html` — `AboutPage`, `BreadcrumbList`, `Person` (Pastor Mike Kleitz)
+- `events.html` — **78 `Event` nodes** generated from the visible 2026 calendar, plus `WebPage`/`BreadcrumbList`
+- `evangelism.html` — `WebPage`, `BreadcrumbList`, `VideoObject` (Randy O'Brien training video)
+- `beliefs.html` / `gospel.html` / `watch.html` — `WebPage` + `BreadcrumbList`
+- `visit.html` — `ContactPage` + `BreadcrumbList`
+
+Validate after edits at https://validator.schema.org/ and Google's Rich Results Test.
+If the calendar changes, regenerate the `Event` block so the markup still matches the
+visible page content (a Google requirement).
+
 ## Local preview
 
 No build step. Serve the folder and open it in a browser (use a server, not file://, so paths behave like production):
