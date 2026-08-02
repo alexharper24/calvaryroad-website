@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://calvaryroadbaptist.net/sitemap.xml
+Sitemap: https://crbcindiana.com/sitemap.xml
