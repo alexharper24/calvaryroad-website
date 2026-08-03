@@ -28,7 +28,7 @@ robots.txt, sitemap.xml, CNAME, .nojekyll
 These were recovered from the old site, which had conflicting information. Confirm and correct before launch:
 
 1. **Phone numbers.** The old site showed two: **(812) 945-1943** (used here as the church office) and **(812) 946-3076** (used here as Pastor Mike's direct line, per the old site's "call Pastor Mike... any time day or night"). Confirm which is which. The office number is the canonical NAP number in the footer, structured data, and Google Business Profile.
-2. **Email.** The old site showed both `mkleitz@calvaryroadbaptist.net` (staff page) and `mkleitz@me.com` (contact page). This site uses **mkleitz@calvaryroadbaptist.net**. Confirm which inbox is actually monitored, or set up a dedicated office address.
+2. ~~**Email.**~~ **Resolved.** The site uses **crbcindiana@gmail.com** everywhere: the Visit and Home contact blocks, the pastor's line on the Our Church page, the prayer-request mailto, and the `Church` structured data. The old `mkleitz@calvaryroadbaptist.net` / `mkleitz@me.com` addresses are no longer referenced.
 3. **Map / geo coordinates.** The JSON-LD `geo` in `index.html` is approximate. Replace with exact coordinates: right-click the building in Google Maps, "What's here?", copy the lat/long.
 4. **Photos are low resolution.** All gallery photos were recovered from the old site's slideshow (600x250). They are usable but not sharp. Replacing them with fresh, higher-resolution photos is the single biggest quality upgrade available.
 5. **Logo.** Recreated as a clean transparent-white PNG from the old black JPEG. If the church has the original vector/high-res logo, swap it in for crisper rendering.
