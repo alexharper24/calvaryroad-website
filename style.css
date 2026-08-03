@@ -134,6 +134,20 @@ img { max-width: 100%; height: auto; display: block; }
 .service-strip .svc b { font-family: var(--font-head); font-size: 1.05rem; }
 .service-strip .svc .t { font-weight: 700; }
 
+/* verse banner with the world map behind it (Great Commission section).
+   Subtle treatment: map clearly visible under a 45% brand-green scrim. */
+.verse-map {
+  position: relative;
+  background-image: url('img/world-map.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.verse-map::before {
+  content: ""; position: absolute; inset: 0;
+  background: rgba(27,47,42,0.45);
+}
+.verse-map > .container { position: relative; z-index: 1; }
+
 /* ---------- generic layout helpers ---------- */
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .two-col.narrow-gap { gap: 32px; }
@@ -273,6 +287,9 @@ input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 
   .hero { background: linear-gradient(150deg, var(--primary) 0%, var(--primary-dark) 100%) !important; color:#fff !important; }
   .section-dark, .cta-card, .day-badge, .doctrine > button .ico { background: var(--primary) !important; }
   .section-dark { color:#eef1ee !important; }
+  /* the shorthand above would strip the map; re-assert it so the verse banner keeps its image */
+  .verse-map { background-image: url('img/world-map.jpg') !important;
+               background-size: cover !important; background-position: center !important; }
   .service-strip { background: var(--accent) !important; color:#241f10 !important; }
   .site-footer { background: var(--primary-dark) !important; }
   .mobile-nav { background: var(--primary) !important; }
