@@ -295,3 +295,15 @@ input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 
   .mobile-nav { background: var(--primary) !important; }
   input, textarea { background:#fff !important; color:#2a2a27 !important; }
 }
+
+
+/* --------------------------------------------------------------------------
+   Footer link tap targets (added 2026-08-06 after a rendered audit).
+   Footer links measured 17-36px tall against the 44px minimum that both Apple
+   and Google publish, so a fingertip overlapped the neighbouring link. Padding
+   only: the text size is unchanged, and this is scoped to phones so desktop
+   footer density stays exactly as it was.
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  footer .cols a, footer .info-list a { padding-top: 11px; padding-bottom: 11px; }
+}
