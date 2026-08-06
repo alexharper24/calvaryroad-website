@@ -3,6 +3,27 @@
 (function () {
   'use strict';
 
+  /* ---- Google Analytics (GA4) ----
+     Deliberately here and not pasted into nine <head> blocks. The shared shell
+     is already duplicated across every page and drifts; the measurement ID is
+     one more thing that would have to be kept in sync by hand.
+
+     TO ENABLE: put the Measurement ID below (GA4 > Admin > Data streams > Web,
+     it looks like G-XXXXXXXXXX) and bump main.js?v= on all nine pages in the
+     same commit, or browsers will keep serving the cached copy.
+     While it is empty, no script loads and nothing is sent. */
+  var GA_ID = 'G-NLQLCNPY1Q';
+  if (GA_ID) {
+    var ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(ga);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID);
+  }
+
   /* ---- mobile nav ---- */
   function openNav()  { var m = document.getElementById('mobileNav'); if (m) { m.classList.add('open'); document.body.style.overflow = 'hidden'; } }
   function closeNav() { var m = document.getElementById('mobileNav'); if (m) { m.classList.remove('open'); document.body.style.overflow = ''; } }

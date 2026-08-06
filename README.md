@@ -32,6 +32,7 @@ These were recovered from the old site, which had conflicting information. Confi
 3. **Map / geo coordinates.** The JSON-LD `geo` in `index.html` is approximate. Replace with exact coordinates: right-click the building in Google Maps, "What's here?", copy the lat/long.
 4. **Photos are low resolution.** All gallery photos were recovered from the old site's slideshow (600x250). They are usable but not sharp. Replacing them with fresh, higher-resolution photos is the single biggest quality upgrade available.
 5. **Logo.** Recreated as a clean transparent-white PNG from the old black JPEG. If the church has the original vector/high-res logo, swap it in for crisper rendering.
+6. ~~**Google Analytics.**~~ **Resolved.** GA4 property `G-NLQLCNPY1Q` is live. The loader sits in `main.js` (`GA_ID`) rather than in nine `<head>` blocks, so changing it is a one-line edit plus a `main.js?v=` bump on every page in the same commit. No consent banner, by decision. The old site had no analytics of any kind, so there was no historical data to carry over. Still to do: confirm the property is owned by the church's own Google account, and link it to Search Console.
 
 ## Old-site URL redirects (SEO carry-over)
 
